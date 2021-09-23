@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class ProjectionRow extends StatelessWidget {
-  final String age;
+  final String result;
   final String value;
 
-  ProjectionRow(this.age, this.value);
+  ProjectionRow(this.result, this.value);
 
   @override
   Widget build(BuildContext context) {
@@ -15,13 +15,13 @@ class ProjectionRow extends StatelessWidget {
     String formattedValue;
     Color labelColor;
 
-    if (age == "Age") {
+    if (result == "Result") {
       bold = FontWeight.bold;
       formattedValue = value;
       labelColor = Colors.green;
     } else {
       labelColor = Colors.black;
-      formattedValue = "\$" + currency.format(double.parse(value)).toString();
+      formattedValue = value;
     }
 
     return Card(
@@ -39,7 +39,7 @@ class ProjectionRow extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            ProjectionCell(age, bold, labelColor, Icons.person),
+            ProjectionCell(result, bold, labelColor, Icons.person),
             Container(
               width: 1,
               height: 45,

@@ -13,6 +13,7 @@ class ProjectionTable extends StatelessWidget {
         margin: EdgeInsets.only(top: 10),
         child: Table(
             children: [
+              
               ...resultList.map((entry) {
                 return TableRow(children: [
                   TableCell(

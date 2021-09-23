@@ -14,7 +14,7 @@ class ProjectionCell extends StatelessWidget {
     return Expanded(
       child:
           Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-        _result == "Age" || _result == "Value" ? Icon(_iconData) : Container(),
+        _result == "Knit" || _result == "Value" ? Icon(_iconData) : Container(),
         Text(
           _result,
           textAlign: TextAlign.center,

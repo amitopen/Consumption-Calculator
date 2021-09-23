@@ -1,62 +1,56 @@
 import 'package:finance_calculator/EntryRow.dart';
 import 'package:flutter/material.dart';
 
-class EntryTable extends StatelessWidget {
-  final List<TextEditingController> controllers;
+class EntryTableWoven extends StatelessWidget {
+  final List<TextEditingController> controllersWoven;
 
-  EntryTable(this.controllers);
+  EntryTableWoven(this.controllersWoven);
 
   @override
   Widget build(BuildContext context) {
     var row1 = [
       {
-        "label": "Body Length",
+        "label": "Width",
         "hint": "e.g. 00",
-        "controller": controllers[0]
+        "controllersWoven": controllersWoven[0]
       },
       {
-        "label": "Sleeve Length",
+        "label": "Allowence",
         "hint": "00",
-        "controller": controllers[1]
+        "controllersWoven": controllersWoven[1]
       }
     ];
 
     final row2 = [
       {
-        "label": "Allowence",
+        "label": "Length",
         "hint": "e.g. 00",
-        "controller": controllers[2]
+        "controllersWoven": controllersWoven[2]
       },
       {
-        "label": "Width",
+        "label": "Aw",
         "hint": "e.g. 00",
-        "controller": controllers[3]
+        "controllersWoven": controllersWoven[3]
       }
-
     ];
 
     final row3 = [
       {
-        "label": "AW",
-        "hint": "e.g. 00",
-        "controller": controllers[4]
-      },
-      {
         "label": "Part",
         "hint": "e.g. 00",
-        "controller": controllers[5]
-      }
+        "controllersWoven": controllersWoven[4]
+      },
     ];
     final row4 = [
       {
-        "label": "GSM",
+        "label": "Cutable",
         "hint": "e.g. 00",
-        "controller": controllers[6]
+        "controller": controllersWoven[5]
       },
       {
         "label": "Wastage %",
         "hint": "e.g. \%2",
-        "controller": controllers[7]
+        "controller": controllersWoven[6]
       }
     ];
 
@@ -70,7 +64,6 @@ class EntryTable extends StatelessWidget {
         EntryRow(row2),
         EntryRow(row3),
         EntryRow(row4),
-
         Container(
           width: double.infinity,
           height: 10,
